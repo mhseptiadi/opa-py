@@ -11,7 +11,7 @@ from exceptions.auth_exception import AuthException
 from handlers.jwt_handler import jwt_decode
 
 load_dotenv()
-opa_host = os.environ.get("OPA_HOST", "http://opa:8181")
+opa_host = os.environ.get("OPA_HOST", "https://opa:8181")
 opa_jwt_key = os.environ.get("OPA_JWT_KEY", "opaSecretKey")
 app_name = os.environ.get("APP_NAME", "opa-py")
 
@@ -37,15 +37,20 @@ def check_opa(roles, action, target):
             }
         })
 
-        response = requests.post(opa_host + "/v1/data/permission", headers=headers, data=opa_input)
+        response = requests.post(opa_host + "/v1/data/permission", headers=headers, data=opa_input, verify=False)
 
     except Exception as e:
         app.logger.debug("Unexpected error requesting OPA server: %s", repr(e))
         raise AuthException("Unexpected error requesting OPA server", 500)
 
     if response.status_code != 200:
+        try:
+            message = response.json()
+        except Exception as e:
+            message = ''
+
         raise AuthException(
-            "OPA server response code: " + str(response.status_code) + ". message:" + str(response.json()),
+            "OPA server response code: " + str(response.status_code) + ". message:" + str(message),
             response.status_code
         )
 

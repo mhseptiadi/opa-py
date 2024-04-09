@@ -55,7 +55,7 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 ---
 
 ### Set ssl certificate to configmap
-
+We only need server.crt and server.key to configmap
 ```shell
 kubectl create configmap server-crt --from-file ./server.crt
 ```
