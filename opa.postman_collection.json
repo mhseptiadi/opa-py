@@ -85,57 +85,7 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MzI1MDM1MTh9.cISGZZUr6upm3hZLTg81pfymyOb4_ItWBDnBPEsgDGI",
-						"description": "admin",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzAyNDE3MTE4LCJleHAiOjE3MDI1MDM1MTh9.bzEe8M12O-mUot2hWC_2SdBT3j34_Ra4dzBtK697XGc",
-						"description": "expired",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MTI1MDM1MTh9.m7EaZ6wxSujnVNlrrr_XmuE3_fBb7HZVq2SO7xarobk",
-						"description": "dont have role",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MTI1MDM1MTh9.M-E2MQesyoX-KGXW-BhHTEJrz-tv0uwdsr7JGojwi0k",
-						"description": "wrong jwt key",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MTI1MDM1MTh9.M-E2MQesyoX-KGXW-BhHTEJrz-tv0uwdsr7JGojwi0k",
-						"description": "Wrong bearer",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWlucyJdLCJpZCI6IjA0ZWIxNDM2LWMzYWQtNDZjYS1hODMzLTJlNjBhODhiYjU2MSIsImlhdCI6MTcxMjQxNzExOCwiZXhwIjoxNzMyNTAzNTE4fQ.Hk2AgGvxMo0FcB_NACimLwDuDIH3EBbcW_8SfsWEPLI",
-						"description": "Wrong role",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdXNlci5jb20iLCJuYW1lIjoidXNlciIsInJvbGVzIjpbInVzZXIiXSwiaWQiOiIwNGViMTQzNi1jM2FkLTQ2Y2EtYTgzMy0yZTYwYTg4YmI1NjEiLCJpYXQiOjE3MTI0MTcxMTgsImV4cCI6MTczMjUwMzUxOH0.FYVjdfjU-MyZfKAXKaPQjBfGRJrbiHgr7nHA6HxtEWs",
-						"description": "user",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"admin\"\r\n}",
@@ -178,57 +128,7 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MzI1MDM1MTh9.cISGZZUr6upm3hZLTg81pfymyOb4_ItWBDnBPEsgDGI",
-						"description": "admin",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzAyNDE3MTE4LCJleHAiOjE3MDI1MDM1MTh9.bzEe8M12O-mUot2hWC_2SdBT3j34_Ra4dzBtK697XGc",
-						"description": "expired",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MTI1MDM1MTh9.m7EaZ6wxSujnVNlrrr_XmuE3_fBb7HZVq2SO7xarobk",
-						"description": "dont have role",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MTI1MDM1MTh9.M-E2MQesyoX-KGXW-BhHTEJrz-tv0uwdsr7JGojwi0k",
-						"description": "wrong jwt key",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MTI1MDM1MTh9.M-E2MQesyoX-KGXW-BhHTEJrz-tv0uwdsr7JGojwi0k",
-						"description": "Wrong bearer",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWlucyJdLCJpZCI6IjA0ZWIxNDM2LWMzYWQtNDZjYS1hODMzLTJlNjBhODhiYjU2MSIsImlhdCI6MTcxMjQxNzExOCwiZXhwIjoxNzMyNTAzNTE4fQ.Hk2AgGvxMo0FcB_NACimLwDuDIH3EBbcW_8SfsWEPLI",
-						"description": "Wrong role",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdXNlci5jb20iLCJuYW1lIjoidXNlciIsInJvbGVzIjpbInVzZXIiXSwiaWQiOiIwNGViMTQzNi1jM2FkLTQ2Y2EtYTgzMy0yZTYwYTg4YmI1NjEiLCJpYXQiOjE3MTI0MTcxMTgsImV4cCI6MTczMjUwMzUxOH0.FYVjdfjU-MyZfKAXKaPQjBfGRJrbiHgr7nHA6HxtEWs",
-						"description": "user",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"email\": \"user@user.com\",\r\n    \"password\": \"user\"\r\n}",
@@ -271,57 +171,7 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MzI1MDM1MTh9.cISGZZUr6upm3hZLTg81pfymyOb4_ItWBDnBPEsgDGI",
-						"description": "admin",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzAyNDE3MTE4LCJleHAiOjE3MDI1MDM1MTh9.bzEe8M12O-mUot2hWC_2SdBT3j34_Ra4dzBtK697XGc",
-						"description": "expired",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MTI1MDM1MTh9.m7EaZ6wxSujnVNlrrr_XmuE3_fBb7HZVq2SO7xarobk",
-						"description": "dont have role",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MTI1MDM1MTh9.M-E2MQesyoX-KGXW-BhHTEJrz-tv0uwdsr7JGojwi0k",
-						"description": "wrong jwt key",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlkIjoiMDRlYjE0MzYtYzNhZC00NmNhLWE4MzMtMmU2MGE4OGJiNTYxIiwiaWF0IjoxNzEyNDE3MTE4LCJleHAiOjE3MTI1MDM1MTh9.M-E2MQesyoX-KGXW-BhHTEJrz-tv0uwdsr7JGojwi0k",
-						"description": "Wrong bearer",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWlucyJdLCJpZCI6IjA0ZWIxNDM2LWMzYWQtNDZjYS1hODMzLTJlNjBhODhiYjU2MSIsImlhdCI6MTcxMjQxNzExOCwiZXhwIjoxNzMyNTAzNTE4fQ.Hk2AgGvxMo0FcB_NACimLwDuDIH3EBbcW_8SfsWEPLI",
-						"description": "Wrong role",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdXNlci5jb20iLCJuYW1lIjoidXNlciIsInJvbGVzIjpbInVzZXIiXSwiaWQiOiIwNGViMTQzNi1jM2FkLTQ2Y2EtYTgzMy0yZTYwYTg4YmI1NjEiLCJpYXQiOjE3MTI0MTcxMTgsImV4cCI6MTczMjUwMzUxOH0.FYVjdfjU-MyZfKAXKaPQjBfGRJrbiHgr7nHA6HxtEWs",
-						"description": "user",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"email\": \"other@other.com\",\r\n    \"password\": \"other\"\r\n}",
