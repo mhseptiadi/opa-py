@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: opa-py
+spec:
+  selector:
+    app: opa-py
+  ports:
+    - protocol: "TCP"
+      port: 6000
+      targetPort: 8000
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opa-py
+spec:
+  selector:
+    matchLabels:
+      app: opa-py
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: opa-py
+    spec:
+      containers:
+        - name: opa-py
+          image: opa-py:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8000

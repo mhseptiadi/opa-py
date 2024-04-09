@@ -14,5 +14,11 @@
         "roles": [
           "admin"
         ]
+    },
+    {
+        "email": "other@other.com",
+        "name": "other",
+        "password": "$2b$13$KBbT27Kj.oMO43bOuzI5y.owdSiKAJBc3rlgqHtyHJvN9kjo7OwYK",
+        "roles": []
     }
 ]
