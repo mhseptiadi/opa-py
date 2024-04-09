@@ -2,6 +2,7 @@ import json
 import os
 from functools import wraps
 
+import jwt
 import requests
 from dotenv import load_dotenv
 from flask import Flask, request
@@ -10,13 +11,24 @@ from exceptions.auth_exception import AuthException
 from handlers.jwt_handler import jwt_decode
 
 load_dotenv()
-opa_host = os.environ.get("OPA_HOST", "http://localhost:8181")
+opa_host = os.environ.get("OPA_HOST", "http://opa:8181")
+opa_jwt_key = os.environ.get("OPA_JWT_KEY", "opaSecretKey")
+app_name = os.environ.get("APP_NAME", "opa-py")
 
 app = Flask(__name__)
 
 
 def check_opa(roles, action, target):
     try:
+        token = jwt.encode({
+            "app": app_name
+        }, opa_jwt_key, algorithm="HS256")
+
+        headers = {
+            "Content-Type": "application/json; charset=utf-8",
+            "Authorization": "Bearer " + token
+        }
+
         opa_input = json.dumps({
             "input": {
                 "roles": roles,
@@ -24,7 +36,8 @@ def check_opa(roles, action, target):
                 "object": target
             }
         })
-        response = requests.post(opa_host + "/v1/data/permission", data=opa_input)
+
+        response = requests.post(opa_host + "/v1/data/permission", headers=headers, data=opa_input)
 
     except Exception as e:
         app.logger.debug("Unexpected error requesting OPA server: %s", repr(e))
@@ -32,7 +45,7 @@ def check_opa(roles, action, target):
 
     if response.status_code != 200:
         raise AuthException(
-            "OPA server response code: " + response.status_code + ". message:" + response.json(),
+            "OPA server response code: " + str(response.status_code) + ". message:" + str(response.json()),
             response.status_code
         )
 
