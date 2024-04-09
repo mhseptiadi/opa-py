@@ -120,7 +120,8 @@ There are 3 api endpoints for this testing:
 - Create Users (only admin role)
 
 
-#### First, Use Login API
+### First, Use Login API
+Login admin (admin@admin.com) that has crud privilege on users endpoint
 ```shell
 curl --location 'https://127.0.0.1:55738/api/login' \
 --header 'Content-Type: application/json' \
@@ -130,8 +131,27 @@ curl --location 'https://127.0.0.1:55738/api/login' \
 }'
 ```
 
+Login user (user@user.com) that has only read users endpoint
+```shell
+curl --location 'https://127.0.0.1:55738/api/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "user@user.com",
+    "password": "user"
+}'
+```
 
-#### Get Users api
+Login other (other@other.com) that does not have any privilege
+```shell
+curl --location 'https://127.0.0.1:55738/api/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "other@other.com",
+    "password": "other"
+}'
+```
+
+### Get Users api
 From the login api above you will get authorization bearer. Copy the bearer and use it on get users api.
 
 ```shell
@@ -142,7 +162,7 @@ curl --location 'https://127.0.0.1:55738/api/users' \
 Both `admin` and `user` can access this endpoint because they have role admin and user. The last user `other` cannot access this endpoint because he doesn't have access.
 
 
-#### Create User api
+### Create User api
 
 The same like before, copy the bearer from login and use it in this api.
 
@@ -161,3 +181,30 @@ curl --location 'https://127.0.0.1:55738/api/users' \
 ```
 
 In this create user api, only `admin` can have access.
+
+### Import postman
+For testing purpose, you can import `opa.postman_collection.json` postman. You need to add environment as login will save bearer to environment.
+
+#### Login as an admin 
+- First login as admin
+![img.png](img.png)
+- Then try get users endpoint, you will have access on it
+![img_1.png](img_1.png)
+- Then try create users endpoint, you still have access
+![img_2.png](img_2.png)
+
+#### Login as normal user
+- Second, try login as normal user
+![img_3.png](img_3.png)
+- Then try get users endpoint, you will have access on it
+![img_1.png](img_1.png)
+- Then try create users endpoint, you will have no access
+![img_4.png](img_4.png)
+
+#### Login as other user
+- Last, try login as other user that does not have any privilege
+![img_5.png](img_5.png)
+- Then try get users endpoint, you will have no access
+![img_6.png](img_6.png)
+- Then try create users endpoint, you will have no access
+![img_4.png](img_4.png)

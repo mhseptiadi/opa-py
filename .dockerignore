@@ -1,7 +1,12 @@
 .idea
 .venv
 cmd.txt
+
 server.crt
 server.csr
 server.key
 server.key.org
+
+*.png
+opa.postman_collection.json
+README.md
