@@ -6,4 +6,3 @@
 ```angular2html
 docker build -f Dockerfile -t opa-py:latest .
 ```
-
