@@ -28,8 +28,24 @@ spec:
         app: opa-py
     spec:
       containers:
-        - name: opa-py
-          image: opa-py:latest
-          imagePullPolicy: Never
-          ports:
-            - containerPort: 8000
+      - name: opa-py
+        image: opa-py:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+
+        volumeMounts:
+        - mountPath: /opa-py/server.key
+          name: server-key
+          subPath: server.key
+        - mountPath: /opa-py/server.crt
+          name: server-crt
+          subPath: server.crt
+
+      volumes:
+      - name: server-key
+        configMap:
+          name: server-key
+      - name: server-crt
+        configMap:
+          name: server-crt

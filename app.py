@@ -50,11 +50,10 @@ def route_login():
 
 
 if __name__ == '__main__':
-    print(is_prod, app_port)
+    context = ("server.crt", "server.key")
+
     if is_prod == 'True' or is_prod == 'true':
         from waitress import serve
-        serve(app, host="0.0.0.0", port=app_port)
+        serve(app, host="0.0.0.0", port=app_port, ssl_context=context)
     else:
-        app.run(debug=True, host='0.0.0.0', port=app_port)
-
-
+        app.run(debug=True, host='0.0.0.0', port=app_port, ssl_context=context)
